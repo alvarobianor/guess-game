@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func Guess() {
@@ -14,6 +15,7 @@ func Guess() {
 		"Um número aletório será sorteado. Tente acertar. O número é um inteiro entre 0 e 30")
 
 	randomNumber := rand.Intn(31)
+	randomNumber = 22
 	leftTentatives := 10
 	var myTentatives, input = []int{}, 0
 
@@ -22,7 +24,7 @@ func Guess() {
 
 		fmt.Println("Digite um número: ")
 		scanner.Scan()
-		valueInt, err := strconv.Atoi(scanner.Text())
+		valueInt, err := strconv.Atoi(strings.TrimSpace(scanner.Text()))
 
 		input = valueInt
 
@@ -63,5 +65,6 @@ func Guess() {
 		} else {
 			fmt.Println("Você perdeu! O número era:", randomNumber)
 		}
+		fmt.Println("Essas foram as suas tentativas:", myTentatives)
 	}()
 }
