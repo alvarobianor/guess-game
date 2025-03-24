@@ -33,8 +33,8 @@ func Guess() {
 
 		var hasTriedThisNumber bool = false
 
-		for _, v := range myTentatives {
-			if valueInt == v {
+		for _, myTentative := range myTentatives {
+			if valueInt == myTentative {
 				fmt.Println("Você já tentou esse número. Tente outro.")
 				hasTriedThisNumber = true
 				continue
