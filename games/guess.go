@@ -51,6 +51,9 @@ func Guess() {
 		}
 
 		myTentatives = append(myTentatives, valueInt)
+		if leftTentatives == 0 {
+			break
+		}
 		fmt.Println("Você errou! Você ainda tem", leftTentatives, "tentativas")
 	}
 
