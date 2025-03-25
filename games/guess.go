@@ -15,7 +15,6 @@ func Guess() {
 		"Um número aletório será sorteado. Tente acertar. O número é um inteiro entre 0 e 30")
 
 	randomNumber := rand.Intn(31)
-	randomNumber = 22
 	leftTentatives := 10
 	var myTentatives, input = []int{}, 0
 
